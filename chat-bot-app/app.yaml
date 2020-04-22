@@ -1,0 +1,8 @@
+runtime: python37
+instance_class: F4_HIGHMEM
+env: standard
+entrypoint: gunicorn -b :$PORT main:app
+
+handlers:
+- url: /
+  script: auto
